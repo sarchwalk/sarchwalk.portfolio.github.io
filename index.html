@@ -1,21 +1,75 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles/generalStyle.css">
+<head>
+    <title>Watermelon Fan Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/generalStyle.css">
+</head>
+<body>
 
-        <div class="topnav">
-            <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">TUI</a></li>
-            <li><a href="#contact">HCI</a></li>
-            <li><a href="#about">SENG 513</a></li>
-            </ul>
+<div class="header">
+    <h1>
+        <img class="icon" src="https://i.pinimg.com/originals/7b/44/27/7b442719b5e351151f3e32859cb8d7b6.png" alt="watermelon">
+        Watermelon Fan Site
+        <img class="icon" src="https://i.pinimg.com/originals/7b/44/27/7b442719b5e351151f3e32859cb8d7b6.png" alt="watermelon">
+    </h1>
+</div>
+
+
+<div class="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pastPresentFuture.html">Past, Present, and Future</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</div>
+
+
+<div class="container">
+    <h1 class="title">
+        This site is dedicated to human kinds' universal love of watermelon!
+        <img class="gallery" src="data:image/png;base64,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" alt="Watermelon">
+    </h1>
+
+    <h1 class="title">
+        Fun Facts
+    </h1>
+
+    <div class="paragraph">
+        <h4 class="title">
+            Did you know that watermelons are 92% water?<br>
+            Watermelons are Oklahomas official state vegetable!<br>
+            Watermelons are technically a fruit. What are those Oklahomans thinking?<br>
+            You can eat all parts of the watermelon.<br>
+            Watermelons aren't always pink inside, they can have other flesh colors like white or yellow.
+        </h4>
+    </div>
+
+    <hr>
+
+    <h3 class="title">
+        Don't know where to start? Try one of the below!
+    </h3>
+
+    <div class="row">
+        <div class="column">
+            <a href="pastPresentFuture.html" class="bButton">
+                Learn the history of the watermelon, where they are today,
+                and where they will be in the future.
+            </a>
         </div>
-    </head>
-
-    <img id="hero" src="stolenPC.jfif">
-
-    <body>
-
-    </body>
+        <div class="column" >
+            <a href="recipes.html" class="bButton">
+                Try a new recipe!
+            </a>
+        </div>
+        <div class="column" >
+            <a href="gallery.html" class="bButton">
+                Look at some inspiring images!
+            </a>
+        </div>
+    </div>
+</div>`
+</body>
 </html>
