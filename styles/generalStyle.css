@@ -59,6 +59,18 @@ p, h1, h2, h3, h4, h5, h6, li {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 25px;
+}
+
 a {
     padding: 8px;
     color: #ffffff;
@@ -142,6 +154,11 @@ a:hover {
     display: block;
 }
 
+.profile {
+    max-width: 100%;
+}
+
+
 
 /*
     Table styling
@@ -157,4 +174,8 @@ a:hover {
 }
 #varieties tr:hover {
     background-color: #ffcff8;
+}
+
+.intro {
+    margin: 0 20%;
 }
