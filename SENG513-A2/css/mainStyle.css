@@ -1,0 +1,91 @@
+/*
+Container and general styling
+ */
+
+* {
+    box-sizing:border-box;
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+    .container {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 1001px)
+{
+    .container
+    {
+        width: 600px;
+    }
+}
+.container {
+    background-color: #EDA6CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #D897BB;
+}
+
+
+/*
+    General area where input and answers are output
+ */
+#display {
+    background-color: #FFF8EA;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#inputDisplay {
+    height: 50px;
+    text-align: right;
+    color: #DDA116;
+    font-size: 20px;
+}
+#historyDisplay {
+    height: 50px;
+    text-align: right;
+    color: #DDA116;
+    font-size: 15px;
+}
+
+#resultDisplay {
+    height: 50px;
+}
+
+.calculator {
+    width: 100%
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+    padding: 1px;
+}
+/*
+button styles
+ */
+button {
+    border-radius: 8px;
+    background-color: #FFE0F8;
+    border: none;
+    color: #9c9c9c;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    font-size: 24px;
+    box-shadow: 0 0 2px #E8CCE2;
+}
+
+.col-sm-3, .col-sm-6{
+    padding: 2px;
+}
