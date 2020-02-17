@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>Project 1: Colour Blender</title>
+</head>
+<body>
+
+<div class="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hci.html">HCI II</a></li>
+        <li><a href="tangibles.html">Physical and Tangible HCI</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>The Colour Blender</h1>
+    <h3>Assignment 1: Arduino Hello World</h3>
+
+    <div class="intro">
+        <p>
+            Create a simple circuit that uses a button to control an LED.
+        </p>
+    </div>
+
+    <h3>Client: Gwyneth Paltrow</h3>
+
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>
+                    The <b>Colour Blender</b> is an interactive art installation and game, that
+                    tests players knowledge of colour mixing. To achieve any colour in
+                    the rainbow, one must either use primary colours on their own, or
+                    mix them to achieve secondary colours. To test players
+                    knowledge of this task, the Colour Blender prompts the player
+                    with a colour and challenges them to recreate it by hitting or
+                    jumping on a sequence of buttons. Making colour mixing a fun,
+                    active, and mess free activity!
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p>
+                    The <b>Colour Blender</b> consists of two lamps, three buttons, and
+                    one toggle switch. The larger of the two lamps is used to display
+                    a computer generated colour that the player must try to achieve
+                    on the smaller lamp. Three buttons, representing red, yellow,
+                    and blue, are placed around the room. Once a player presses
+                    one of them, the smaller lamp will change to show the colour
+                    pertaining to the button. If the right combination of buttons is
+                    pressed, the lamps will blink on and off to indicate success. If the
+                    wrong combination of buttons is pressed, the user must press
+                    the toggle switch to restart.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row sketches">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/designSketch7.png" class="card-img-top" alt="Spongebob in a bubble">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Miley Cyrus Button</b>: click and drag the wrecking ball to demolish Hannah Montana.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/designSketch8.png" class="card-img-top" alt="Queen Elizabeth sketch">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Oprah Button</b>: click to see Oprah throwing a gift at you. Gets successively more
+                        expensive as click frequency climbs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/designSketch9.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Slenderman Button</b>: as Slenderman, the user points their cursor towards their victim.
+                        On click the victim gets eaten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row sketches">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/designSketch10.png" class="card-img-top" alt="Spongebob in a bubble">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Kim Kardashian Button</b>: click and drag Kim's earing into the ocean. Kim begins to
+                        cry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro">
+        <h3>After gaining feedback from our peers, we decided to go ahead with Gwyneth as our client. We felt that
+            we could explore her randomness further and surprise users with her antics.</h3>
+    </div>
+
+
+
+    <h2>Refined Sketches</h2>
+    <div class="intro">
+        <h3>
+            We centered around the idea of a random chance game to show Gwyneth's randomness. The sketches below are our iterations
+            on different interactions with the wheel.
+        </h3>
+    </div>
+
+
+    <div class="row sketches">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/refinedSketchOriginal.png" class="card-img-top" alt="Wheel landed on science">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Wheel lands on science</b>: I explored having Gwyneth react negatively to the wheel landing
+                        on a science option. This action would be a play on Gwyneth's desire to do things as long as
+                        they are not supported by science.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/refinedSketch1.png" class="card-img-top" alt="Gwyneth shakes head no">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Wheel lands on science</b>: Gwyneth shakes her head no to say
+                        that she will not participate in the science option.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="images/p0/refinedSketch2.png" class="card-img-top" alt="Gwyneth grabs the wheel and moves it">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Wheel lands on science</b>: Gwyneth reaches out and grabs the edge of the wheel.
+                        She then shifts the wheel so that it is no longer on the science option.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row sketches">
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="images/p0/refinedSketch5.png" class="card-img-top" alt="Wheel landed on science">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Wheel lands on science</b>: Gwyneth covers the science image with her company logo, and
+                        begins shooting an episode of her show.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="images/p0/refinedSketch4.png" class="card-img-top" alt="Gwyneth screams">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Wheel lands on science</b>: Gwyneth screams so loud that the wheel shakes, causing
+                        it to shift.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row sketches">
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="images/p0/refinedSketch6.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Coffee Enema</b>: I played around with the idea of pouring coffee on a peach to avoid
+                        being too graphic. Ultimately this idea was scrapped as we ran out of time.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="images/p0/refinedSketch7.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Coffee Enema</b>: my groupmate, Valerie, proposed the idea of having a cam for inflicted areas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <h3>Final Version</h3>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B1tlhxlZgfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
