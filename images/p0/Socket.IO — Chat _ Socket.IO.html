@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://socket.io/get-started/chat/ -->
+<html wtx-context="A114EC60-633E-489C-89B4-41D8F7ADBC6C"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Hexo 3.9.0">
+  
+  
+<!-- Google Analytics -->
+<script async="" src="./Socket.IO — Chat _ Socket.IO_files/analytics.js.download"></script><script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-108243656-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Socket.IO  —  Chat | Socket.IO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In this guide we’ll create a basic chat application. It requires almost no basic prior knowledge of Node.JS or Socket.IO, so it’s ideal for users of all knowledge levels. IntroductionWriting a chat ap">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Socket.IO  —  Chat">
+<meta property="og:url" content="https://socket.io/get-started/chat/index.html">
+<meta property="og:site_name" content="Socket.IO">
+<meta property="og:description" content="In this guide we’ll create a basic chat application. It requires almost no basic prior knowledge of Node.JS or Socket.IO, so it’s ideal for users of all knowledge levels. IntroductionWriting a chat ap">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://socket.io/images/chat-1.png">
+<meta property="og:image" content="https://socket.io/images/chat-2.png">
+<meta property="og:image" content="https://socket.io/images/chat-3.png">
+<meta property="og:image" content="https://socket.io/images/chat-4.png">
+<meta property="og:image" content="https://socket.io/images/chat-5.png">
+<meta property="og:updated_time" content="2019-11-13T06:46:23.483Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Socket.IO  —  Chat">
+<meta name="twitter:description" content="In this guide we’ll create a basic chat application. It requires almost no basic prior knowledge of Node.JS or Socket.IO, so it’s ideal for users of all knowledge levels. IntroductionWriting a chat ap">
+<meta name="twitter:image" content="https://socket.io/images/chat-1.png">
+  
+  
+    <link rel="icon" href="https://socket.io/images/favicon.png">
+  
+  
+    <link href="./Socket.IO — Chat _ Socket.IO_files/css" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="./Socket.IO — Chat _ Socket.IO_files/style.css">
+
+  <link href="./Socket.IO — Chat _ Socket.IO_files/css(1)" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./Socket.IO — Chat _ Socket.IO_files/docsearch.min.css">
+<script id="_carbonads_projs" type="text/javascript" src="./Socket.IO — Chat _ Socket.IO_files/CKYIL53N.json"></script></head>
+<body style="">
+
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <a id="logo" href="https://socket.io/"></a>
+  <nav class="main-nav">
+    <ul class="nav-items">
+      <li>
+        <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input id="docsearch-input" type="text" placeholder="Search..." class="ds-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;" wtx-context="38AE8D96-D2E5-475C-87FB-ED11DA4AEC7B"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropdown-toggle nav-item">Learn</span>
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://socket.io/get-started/chat/" class="nav-link">Get started</a>
+            </li>
+            <li>
+              <a href="https://socket.io/docs/" class="nav-link">Documentation</a>
+            </li>
+            <li>
+              <a href="https://socket.io/demos/chat/" class="nav-link">Demos</a>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <a href="https://socket.io/docs/server-api/" class="nav-link">Server API</a>
+            </li>
+            <li>
+              <a href="https://socket.io/docs/client-api/" class="nav-link">Client API</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropdown-toggle nav-item">Resources</span>
+          <ul class="dropdown-content">
+            <li>
+              <span class="nav-links-header">Getting help</span>
+              <ul>
+                <li>
+                  <a href="https://slackin-socketio.now.sh/" target="_blank" class="nav-link">Slack</a>
+                </li>
+                <li>
+                  <a href="https://stackoverflow.com/questions/tagged/socket.io" target="_blank" class="nav-link">Stack Overflow</a>
+                </li>
+              </ul>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <span class="nav-links-header">News</span>
+              <ul>
+                <li>
+                  <a href="https://socket.io/blog/" class="nav-link">Blog</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/SocketIO" target="_blank" class="nav-link">Twitter</a>
+                </li>
+              </ul>
+            </li>
+            <li class="anchor"></li>
+            <li>
+              <span class="nav-links-header">Links</span>
+              <ul>
+                <li>
+                  <a href="https://github.com/socketio/socket.io" target="_blank" class="nav-link">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://cdnjs.com/libraries/socket.io" target="_blank" class="nav-link">CDN</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="https://opencollective.com/socketio" target="_blank" class="nav-item">Support Socket.IO</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+      
+
+<aside id="sidebar">
+
+  
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#The-web-framework"><span class="toc-text">The web framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Serving-HTML"><span class="toc-text">Serving HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Integrating-Socket-IO"><span class="toc-text">Integrating Socket.IO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Emitting-events"><span class="toc-text">Emitting events</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Broadcasting"><span class="toc-text">Broadcasting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Homework"><span class="toc-text">Homework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="https://socket.io/get-started/chat/#Getting-this-example"><span class="toc-text">Getting this example</span></a></li></ol>
+  
+
+</aside>
+
+      <script async="" type="text/javascript" src="./Socket.IO — Chat _ Socket.IO_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCVSDE23NCAB4YKQMFT7DPK7YCWSI6Z3JCWAD62QMC6SDP53KC6BIEKJNCAYIKK3EHJNCLSIZ?segment=placement:socketio;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="./Socket.IO — Chat _ Socket.IO_files/1565021812-White_-_Carbon_260x200.png" alt="ads via Carbon" border="0" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCVSDE23NCAB4YKQMFT7DPK7YCWSI6Z3JCWAD62QMC6SDP53KC6BIEKJNCAYIKK3EHJNCLSIZ?segment=placement:socketio;" class="carbon-text" target="_blank" rel="noopener sponsored">Move data &amp; applications to the edge with our fully-configurable cloud platform.</a></span><a href="http://carbonads.net/?utm_source=socketio&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>
+      
+
+<article id="page-" class="article">
+  <p>In this guide we’ll create a basic chat application. It requires almost no basic prior knowledge of Node.JS or Socket.IO, so it’s ideal for users of all knowledge levels.</p>
+<h2 id="Introduction"><a href="https://socket.io/get-started/chat/#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Writing a chat application with popular web applications stacks like LAMP (PHP) has traditionally been very hard. It involves polling the server for changes, keeping track of timestamps, and it’s a lot slower than it should be.</p>
+<p>Sockets have traditionally been the solution around which most real-time chat systems are architected, providing a bi-directional communication channel between a client and a server.</p>
+<p>This means that the server can <em>push</em> messages to clients. Whenever you write a chat message, the idea is that the server will get it and push it to all other connected clients.</p>
+<h2 id="The-web-framework"><a href="https://socket.io/get-started/chat/#The-web-framework" class="headerlink" title="The web framework"></a>The web framework</h2><p>The first goal is to setup a simple HTML webpage that serves out a form and a list of messages. We’re going to use the Node.JS web framework <code>express</code> to this end. Make sure <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.JS</a> is installed.</p>
+<p>First let’s create a <code>package.json</code> manifest file that describes our project. I recommend you place it in a dedicated empty directory (I’ll call mine <code>chat-example</code>).</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"socket-chat-example"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"my first socket.io app"</span>,</span><br><span class="line">  <span class="attr">"dependencies"</span>: {}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>Now, in order to easily populate the <code>dependencies</code> property with the things we need, we’ll use <code>npm install</code>:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install express@4.15.2</span><br></pre></td></tr></tbody></table></figure>
+<p>Now that express is installed we can create an <code>index.js</code> file that will setup our application.</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'express'</span>)();</span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>).createServer(app);</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>{</span><br><span class="line">  res.send(<span class="string">'&lt;h1&gt;Hello world&lt;/h1&gt;'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">http.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'listening on *:3000'</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>This translates into the following:</p>
+<ul>
+<li>Express initializes <code>app</code> to be a function handler that you can supply to an HTTP server (as seen in line 2). </li>
+<li>We define a route handler <code>/</code> that gets called when we hit our website home.</li>
+<li>We make the http server listen on port 3000.</li>
+</ul>
+<p>If you run <code>node index.js</code> you should see the following:</p>
+<p><img src="./Socket.IO — Chat _ Socket.IO_files/chat-1.png" alt="A console saying that the server has started listening on port 3000"></p>
+<p>And if you point your browser to <code>http://localhost:3000</code>:</p>
+<p><img src="./Socket.IO — Chat _ Socket.IO_files/chat-2.png" alt="A browser displaying a big &#39;Hello World&#39;"></p>
+<h2 id="Serving-HTML"><a href="https://socket.io/get-started/chat/#Serving-HTML" class="headerlink" title="Serving HTML"></a>Serving HTML</h2><p>So far in <code>index.js</code> we’re calling <code>res.send</code> and pass it a HTML string. Our code would look very confusing if we just placed our entire application’s HTML there. Instead, we’re going to create a <code>index.html</code> file and serve it.</p>
+<p>Let’s refactor our route handler to use <code>sendFile</code> instead:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>{</span><br><span class="line">  res.sendFile(__dirname + <span class="string">'/index.html'</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>And populate <code>index.html</code> with the following:</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Socket.IO chat<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      * { margin: 0; padding: 0; box-sizing: border-box; }</span></span><br><span class="line"><span class="undefined">      body { font: 13px Helvetica, Arial; }</span></span><br><span class="line"><span class="undefined">      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }</span></span><br><span class="line"><span class="undefined">      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }</span></span><br><span class="line"><span class="undefined">      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }</span></span><br><span class="line"><span class="undefined">      #messages { list-style-type: none; margin: 0; padding: 0; }</span></span><br><span class="line"><span class="undefined">      #messages li { padding: 5px 10px; }</span></span><br><span class="line"><span class="undefined">      #messages li:nth-child(odd) { background: #eee; }</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"messages"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"m"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> /&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>Send<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>If you restart the process (by hitting Control+C and running <code>node index</code> again) and refresh the page it should look like this:</p>
+<p><img src="./Socket.IO — Chat _ Socket.IO_files/chat-3.png" alt="A browser displaying an input and a &#39;Send&#39; button"></p>
+<h2 id="Integrating-Socket-IO"><a href="https://socket.io/get-started/chat/#Integrating-Socket-IO" class="headerlink" title="Integrating Socket.IO"></a>Integrating Socket.IO</h2><p>Socket.IO is composed of two parts:</p>
+<ul>
+<li>A server that integrates with (or mounts on) the Node.JS HTTP Server: <a href="https://github.com/socketio/socket.io" target="_blank" rel="noopener">socket.io</a></li>
+<li>A client library that loads on the browser side: <a href="https://github.com/socketio/socket.io-client" target="_blank" rel="noopener">socket.io-client</a></li>
+</ul>
+<p>During development, <code>socket.io</code> serves the client automatically for us, as we’ll see, so for now we only have to install one module:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install socket.io</span><br></pre></td></tr></tbody></table></figure>
+<p>That will install the module and add the dependency to <code>package.json</code>. Now let’s edit <code>index.js</code> to add it:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'express'</span>)();</span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>).createServer(app);</span><br><span class="line"><span class="keyword">var</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(http);</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>{</span><br><span class="line">  res.sendFile(__dirname + <span class="string">'/index.html'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>{</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'a user connected'</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">http.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'listening on *:3000'</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>Notice that I initialize a new instance of <code>socket.io</code> by passing the <code>http</code> (the HTTP server) object. Then I listen on the <code>connection</code> event for incoming sockets, and I log it to the console.</p>
+<p>Now in index.html I add the following snippet before the <code>&lt;/body&gt;</code>:</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> socket = io();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>That’s all it takes to load the <code>socket.io-client</code>, which exposes a <code>io</code> global (and the endpoint <code>GET /socket.io/socket.io.js</code>), and then connect.</p>
+<p>If you would like to use the local version of the client-side JS file, you can find it at <code>node_modules/socket.io-client/dist/socket.io.js</code>.</p>
+<p>Notice that I’m not specifying any URL when I call <code>io()</code>, since it defaults to trying to connect to the host that serves the page.</p>
+<p>If you now restart the process (by hitting Control+C and running node index again) and then refresh the webpage you should see the console print “a user connected”.</p>
+<p>Try opening several tabs, and you’ll see several messages:</p>
+<p><img src="./Socket.IO — Chat _ Socket.IO_files/chat-4.png" alt="A console displaying several messages, indicating that some users have connected"></p>
+<p>Each socket also fires a special <code>disconnect</code> event:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>{</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'a user connected'</span>);</span><br><span class="line">  socket.on(<span class="string">'disconnect'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'user disconnected'</span>);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>Then if you refresh a tab several times you can see it in action:</p>
+<p><img src="./Socket.IO — Chat _ Socket.IO_files/chat-5.png" alt="A console displaying several messages, indicating that some users have connected and disconnected"></p>
+<h2 id="Emitting-events"><a href="https://socket.io/get-started/chat/#Emitting-events" class="headerlink" title="Emitting events"></a>Emitting events</h2><p>The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and <a href="https://socket.io/blog/introducing-socket-io-1-0/#binary">binary data</a> is supported too.</p>
+<p>Let’s make it so that when the user types in a message, the server gets it as a <code>chat message</code> event. The <code>script</code> section in <code>index.html</code> should now look as follows:</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://code.jquery.com/jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> socket = io();</span></span><br><span class="line"><span class="javascript">    $(<span class="string">'form'</span>).submit(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span></span><br><span class="line"><span class="javascript">      e.preventDefault(); <span class="comment">// prevents page reloading</span></span></span><br><span class="line"><span class="javascript">      socket.emit(<span class="string">'chat message'</span>, $(<span class="string">'#m'</span>).val());</span></span><br><span class="line"><span class="javascript">      $(<span class="string">'#m'</span>).val(<span class="string">''</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="undefined">    });</span></span><br><span class="line"><span class="undefined">  });</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>And in <code>index.js</code> we print out the <code>chat message</code> event:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>{</span><br><span class="line">  socket.on(<span class="string">'chat message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'message: '</span> + msg);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>The result should be like the following video:</p>
+<video autoplay="" loop="" width="100%"><source src="https://i.cloudup.com/transcoded/zboNrGSsai.mp4"></video>
+
+<h2 id="Broadcasting"><a href="https://socket.io/get-started/chat/#Broadcasting" class="headerlink" title="Broadcasting"></a>Broadcasting</h2><p>The next goal is for us to emit the event from the server to the rest of the users.</p>
+<p>In order to send an event to everyone, Socket.IO gives us the <code>io.emit</code>:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.emit(<span class="string">'some event'</span>, { <span class="attr">someProperty</span>: <span class="string">'some value'</span>, <span class="attr">otherProperty</span>: <span class="string">'other value'</span> }); <span class="comment">// This will emit the event to all connected sockets</span></span><br></pre></td></tr></tbody></table></figure>
+<p>If you want to send a message to everyone except for a certain emitting socket, we have the <code>broadcast</code> flag for emitting from that socket:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>{</span><br><span class="line">  socket.broadcast.emit(<span class="string">'hi'</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>In this case, for the sake of simplicity we’ll send the message to everyone, including the sender.</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>{</span><br><span class="line">  socket.on(<span class="string">'chat message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>{</span><br><span class="line">    io.emit(<span class="string">'chat message'</span>, msg);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>And on the client side when we capture a <code>chat message</code> event we’ll include it in the page. The total client-side JavaScript code now amounts to:</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> socket = io();</span></span><br><span class="line"><span class="javascript">    $(<span class="string">'form'</span>).submit(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span></span><br><span class="line"><span class="javascript">      e.preventDefault(); <span class="comment">// prevents page reloading</span></span></span><br><span class="line"><span class="javascript">      socket.emit(<span class="string">'chat message'</span>, $(<span class="string">'#m'</span>).val());</span></span><br><span class="line"><span class="javascript">      $(<span class="string">'#m'</span>).val(<span class="string">''</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="undefined">    });</span></span><br><span class="line"><span class="javascript">    socket.on(<span class="string">'chat message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>{</span></span><br><span class="line"><span class="javascript">      $(<span class="string">'#messages'</span>).append($(<span class="string">'&lt;li&gt;'</span>).text(msg));</span></span><br><span class="line"><span class="undefined">    });</span></span><br><span class="line"><span class="undefined">  });</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>And that completes our chat application, in about 20 lines of code! This is what it looks like:</p>
+<video autoplay="" loop="" width="100%"><source src="https://i.cloudup.com/transcoded/J4xwRU9DRn.mp4"></video>
+
+<h2 id="Homework"><a href="https://socket.io/get-started/chat/#Homework" class="headerlink" title="Homework"></a>Homework</h2><p>Here are some ideas to improve the application:</p>
+<ul>
+<li>Broadcast a message to connected users when someone connects or disconnects.</li>
+<li>Add support for nicknames.</li>
+<li>Don’t send the same message to the user that sent it himself. Instead, append the message directly as soon as he presses enter.</li>
+<li>Add “{user} is typing” functionality.</li>
+<li>Show who’s online.</li>
+<li>Add private messaging.</li>
+<li>Share your improvements!</li>
+</ul>
+<h2 id="Getting-this-example"><a href="https://socket.io/get-started/chat/#Getting-this-example" class="headerlink" title="Getting this example"></a>Getting this example</h2><p>You can find it on GitHub <a href="https://github.com/socketio/chat-example" target="_blank" rel="noopener">here</a>.</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git clone https://github.com/socketio/chat-example.git</span><br></pre></td></tr></tbody></table></figure>
+
+
+  
+  <footer class="article-footer">
+    Caught a mistake? Edit this page on <a href="https://github.com/socketio/socket.io-website/blob/master/source/get-started/chat.md" target="_blank" class="link">GitHub</a>
+  </footer>
+  
+</article>
+
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="./Socket.IO — Chat _ Socket.IO_files/jquery.min.js.download"></script>
+
+<!-- Algolia DocSearch -->
+<script type="text/javascript" src="./Socket.IO — Chat _ Socket.IO_files/docsearch.min.js.download"></script>
+<script type="text/javascript"> docsearch({
+  apiKey: '58123f8fe0926bd32287730dbc483f6d',
+  indexName: 'socket_io',
+  inputSelector: '#docsearch-input',
+  debug: true  // Set debug to true if you want to inspect the dropdown
+});
+</script>
+
+
+
+  </div>
+
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>Project 0: Wheel of Gwyneth</title>
+</head>
+<body>
+
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hci.html">HCI II</a></li>
+            <li><a href="tangibles.html">Physical and Tangible HCI</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Acaikei and Horse Shoe Key</h1>
+        <h3>CPSC 581 - Human Computer Interaction II, Project 1</h3>
+
+        <div class="intro">
+            <p>
+                Sketch, design, implement and document via a web portfolio an 
+				animated touch-based and sensor based interface for a mobile phone
+				that is an alternative to 'slide to unlock'.
+            </p>
+        </div>
+
+        <h3>Acaikei</h3>
+
+        <div class="intro">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="profilePhoto">
+                        <img class="profile-img" src="https://cdn.britannica.com/56/172456-050-F518B29E/Gwyneth-Paltrow-2013.jpg" alt="Gwyneth Paltrow">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="description">
+                        <p>
+							Acai bowls are colourful smoothie bowls that are popular amongst trendy young people.
+							As a result, they are also heavily customizable, and involve a layer of artistry. To 
+							give users a personalizable and artistic unlock experience, we created <i>Acaikei</i>.
+							Users select the combination of topings and drag them onto the acai bowl, creating a 
+							beautiful image. The right combination of ingredients unlocks the phone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Idea Sketches</h2>
+        <div class="intro">
+            <h3>
+                These are the ideas I explored for the touch-based unlock feature.
+            </h3>
+        </div>
+
+	<div class="row sketches">
+		<div class="col-sm-4">
+			<div class="card">
+				<img src="images/p0/designSketch10.png" class="card-img-top" alt="Spongebob in a bubble">
+				<div class="card-body">
+					<p class="card-text">
+						<b>Kim Kardashian Button</b>: click and drag Kim's earing into the ocean. Kim begins to
+						cry.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="intro">
+		<h3>After gaining feedback from our peers, we decided to go ahead with Gwyneth as our client. We felt that
+			we could explore her randomness further and surprise users with her antics.</h3>
+	</div>
+
+
+
+        <h2>Refined Sketches</h2>
+        <div class="intro">
+            <h3>
+                We centered around the idea of a random chance game to show Gwyneth's randomness. The sketches below are our iterations
+                on different interactions with the wheel.
+            </h3>
+        </div>
+
+
+        <div class="row sketches">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="images/p0/refinedSketchOriginal.png" class="card-img-top" alt="Wheel landed on science">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>Wheel lands on science</b>: I explored having Gwyneth react negatively to the wheel landing
+                            on a science option. This action would be a play on Gwyneth's desire to do things as long as
+                            they are not supported by science.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row sketches">
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="images/p0/refinedSketch4.png" class="card-img-top" alt="Gwyneth screams">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>Wheel lands on science</b>: Gwyneth screams so loud that the wheel shakes, causing
+                            it to shift.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row sketches">
+            <div class="col-sm-6">
+                <div class="card">
+                    <img src="images/p0/refinedSketch7.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>Coffee Enema</b>: my groupmate, Valerie, proposed the idea of having a cam for inflicted areas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <h3>Final Version</h3>
+        <div class="row intro">
+            <div class="col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qMzeRF3HxXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+            <div class="intro">
+                <h2>Source code and executable <a class="inline-link" href="https://github.com/sarchwalk/HCI-P0">here!</a></h2>
+            </div>
+
+
+
+
+    <div class="row intro">
+        <div class="col-sm-12">
+            <h3>My Contributions:</h3>
+        </div>
+    </div>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <p>
+                Initial 10 sketches<br>
+                Refined sketches<br>
+                Graphics: Gwyneth's head and facial reactions, refined wheel<br>
+                Animations: wheel spin, bee facial, adjusting wheel away from science, and refined steaming<br>
+                Code in WPF for animation triggers and randomization<br>
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+</html>
