@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<style>
+    .row {
+        height: 400px;
+    }
+    #myCarousel .list-inline {
+        white-space:nowrap;
+        overflow-x:auto;
+    }
+
+    #myCarousel .carousel-indicators {
+        position: static;
+        left: initial;
+        width: initial;
+        margin-left: initial;
+    }
+
+    #myCarousel .carousel-indicators > li {
+        width: initial;
+        height: initial;
+        text-indent: initial;
+    }
+
+    #myCarousel .carousel-indicators > li.active img {
+        opacity: 0.7;
+    }
+</style>
+<body>
+
+
+<!--Sensor refined 10 is the first sensor based iteration idea-->
+
+<!--Carousel for sensor based interaction refined sketches-->
+<div class="container py-2">
+    <div class="row min-vh-100 align-items-center">
+        <div class="col-lg-8 offset-lg-2" id="slider">
+            <div id="myCarousel" class="carousel slide shadow">
+                <!-- main slider carousel items -->
+                <div class="carousel-inner">
+                    <div class="active carousel-item" data-slide-number="0">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined1.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Loading Horseshoe:</b> hold horseshoe to phone. Horseshoe loading bar fills as sensor determines if it is the correct object.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="1">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined2.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Game:</b> tap horseshoe to phone, horseshoe appears in hand. User flicks phone upward as if to toss horseshoe. The horseshoe spins
+                                around the pin, and the phone unlocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="2">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined3.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Reveal :</b> heart grows as if beating. As horseshoe comes closer to the phone, the heart expands. Tapping the horseshoe to the phone
+                                reveals the horse and the phone unlocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="3">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined4.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Unicorn Horseshoe Game:</b> a modified version of the horseshoe game where the horseshoe is thrown at the unicorns horn. When the horseshoe
+                                spins around the unicorns horn the animal becomes furious.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="4">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined5.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Waving Horse:</b> a horse waves at the user when the phone is idle. User presses a button or taps the phone to wake it up and a
+                                horse hoof appears. Tapping the horseshoe to the screen results in an animation of the horse running off into the distance as the phone
+                                unlocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="5">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined6.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined7.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                    idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="7">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined11.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                    idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="8">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined9.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                    idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-number="9">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./images/p1/sensor_refined8.png" class="img-fluid">
+                            </div>
+                            <div class="col-sm-6">
+                                <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                    idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+                <!-- main slider carousel nav controls -->
+                <ul class="carousel-indicators list-inline mx-auto border px-2">
+                    <li class="list-inline-item active">
+                        <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined1.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined2.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined3.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="3" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined4.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="4" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined5.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="5" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined6.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="6" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined7.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="7" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined11.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="8" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined9.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="9" data-target="#myCarousel">
+                            <img src="./images/p1/sensor_refined8.png" class="img-fluid">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--/main slider carousel-->
+</div>
+
+
+
+</body>
+</html>

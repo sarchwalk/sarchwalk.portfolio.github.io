@@ -3,51 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/generalStyle.css">
-    <title>Project 0: Wheel of Gwyneth</title>
+    <title>Project 1: Acaikii & Shoehorn</title>
 </head>
-<body>
+<style>
 
+
+    #myCarousel .list-inline {
+        white-space:nowrap;
+        overflow-x:auto;
+    }
+
+    #myCarousel .carousel-indicators {
+        position: static;
+        left: initial;
+        width: initial;
+        margin-left: initial;
+    }
+
+    #myCarousel .carousel-indicators > li {
+        width: initial;
+        height: initial;
+        text-indent: initial;
+    }
+
+    #myCarousel .carousel-indicators > li.active img {
+        opacity: 0.7;
+    }
+
+    .sketch {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+    .min-vh-100 {
+        min-height: 3px !important;
+    }
+    p1 {
+        font-size: 12px;
+    }
+
+</style>
+
+<body>
+<div class="header">
+    <h1>
+        Sarah Walker
+        <img class="icon" src="https://c7.uihere.com/files/260/538/516/iphone-emoji-ios-10-ios-9-emoji.jpg" alt="watermelon">
+    </h1>
+</div>
     <div class="nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="hci.html">HCI II</a></li>
-            <li><a href="tangibles.html">Physical and Tangible HCI</a></li>
         </ul>
     </div>
 
     <div class="container">
-        <h1>Acaikei and Horse Shoe Key</h1>
+        <h1>Acaikii and Shoehorn</h1>
         <h3>CPSC 581 - Human Computer Interaction II, Project 1</h3>
 
         <div class="intro">
             <p>
-                Sketch, design, implement and document via a web portfolio an 
+                Sketch, design, implement and document via a web portfolio an
 				animated touch-based and sensor based interface for a mobile phone
 				that is an alternative to 'slide to unlock'.
             </p>
         </div>
 
-        <h3>Acaikei</h3>
+
+
+        <h2>Initial Design Sketches</h2>
+        <br>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-lg-12">
+                    <h4>
+                    Gesture Based Unlock Ideas
+                    </h4>
+                </div>
+                <div class="col-lg-12">
+
+
+
+                    <!--SENSOR BASED UNLOCK INITIAL IDEAS-->
+
+                    <!--Carousel for sensor based interaction refined sketches-->
+                    <div class="py-2">
+                        <div class="row min-vh-100 align-items-center">
+                            <div class="col-lg-8 offset-lg-2" id="slider">
+                                <div id="myCarousel" class="carousel slide shadow">
+                                    <!-- main slider carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active carousel-item" data-slide-number="0">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/gesture_initial1.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Colour Select:</b> user taps a collection of colours. The right combination of colours unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="1">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/gesture_initial2.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Letter Select:</b> the user taps on certain letters displayed on the screen. The right combination of letter unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="2">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/gesture_initial3.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Tower Build:</b> the user drags and drops shapes to build a tower. The right configuration unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="3">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/gesture_initial4.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Colour Scheme:</b> the user selects a colour for each of the sections. The correct colour palette unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="4">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/gesture_initial5.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Snow Clear:</b> user "shovels" the snow by tapping certain areas revealing an image underneath. The correct covered and
+                                                        uncovered areas unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/main slider carousel-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-12">
+                    <h4>
+                        Sensor Based Unlock Ideas
+                    </h4>
+                </div>
+                <div class="col-lg-12">
+                    <!--SENSOR BASED UNLOCK INITIAL IDEAS-->
+
+                    <!--Carousel for sensor based interaction refined sketches-->
+                    <div class="py-2">
+                        <div class="row min-vh-100 align-items-center">
+                            <div class="col-lg-8 offset-lg-2" id="slider">
+                                <div id="myCarousel2" class="carousel slide shadow">
+                                    <!-- main slider carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active carousel-item" data-slide-number="0-a">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/sensor_initial1.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Freckle Recognizer:</b> phone displays a view of the camera on wake. User then points the phone
+                                                        at their arm, and the phone recognizes the pattern of freckles to unlock.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="1-a">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/sensor_initial2.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Hand Sign:</b> the user taps to wakeup the phone, which displays a view of the camera. The user makes a sign with their hand which
+                                                        unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="2-a">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/sensor_initial3.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Rolling Ball Golf:</b> the user tilts their phone to get the ball to roll towards a specific and unmarked hole. Getting the ball
+                                                        in the correct hole unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="3-a">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/sensor_initial4.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Tilt Sequence:</b> the user tilts their phone in a sequence of directions. The correct combination of directions unlocks the phone.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-slide-number="4-a">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="sketch" src="./images/p1/sensor_initial5.JPG" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p1><b>Rolling Ball Button:</b> the user tilts their phone to get the ball to roll and hit the correct sequence of buttons.</p1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/main slider carousel-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<br><br><br>
+
+        <h1>Gesture Based Unlock</h1>
 
         <div class="intro">
             <div class="row">
-                <div class="col-lg-6">
-                    <div id="profilePhoto">
-                        <img class="profile-img" src="https://cdn.britannica.com/56/172456-050-F518B29E/Gwyneth-Paltrow-2013.jpg" alt="Gwyneth Paltrow">
-                    </div>
-                </div>
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div id="description">
-                        <p>
-							Acai bowls are colourful smoothie bowls that are popular amongst trendy young people.
-							As a result, they are also heavily customizable, and involve a layer of artistry. To 
-							give users a personalizable and artistic unlock experience, we created <i>Acaikei</i>.
-							Users select the combination of topings and drag them onto the acai bowl, creating a 
-							beautiful image. The right combination of ingredients unlocks the phone.
+                        <p style="text-align: left">
+							For the gesture-based unlock we decided to iterate on an idea proposed by Valerie, where ingredients were dragged and dropped onto a pizza.
+                            We explored numerous ideas based around using different foods and their ingredients as a password. We thought that this was
+                            a good direction to go in as the number of combinations of individual ingredients would likely
+                            be high, thus increasing the difficulty of someone guessing the password, and the recipe could be used
+                            to represent the user.
                         </p>
                     </div>
                 </div>
@@ -55,128 +282,372 @@
         </div>
 
 
+        <h3>Refined Sketches </h3>
 
-        <h2>Idea Sketches</h2>
-        <div class="intro">
-            <h3>
-                These are the ideas I explored for the touch-based unlock feature.
-            </h3>
-        </div>
+        <!--Carousel for sensor based interaction refined sketches-->
+        <div class="py-2">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-8 offset-lg-2" id="slider">
+                    <div id="myCarousel1" class="carousel slide shadow">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active carousel-item" data-slide-number="0">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined1.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Shish Kabob:</b> the user drags ingredients onto a skewer then touches the skewer to cook it. The phone unlocks if it is the right combination
+                                            of ingredients.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="1">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined2.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Popsicle:</b> Erika suggested a popsicle as the final treat being made. The user would select the right combination of ingredients to unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined3.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Oatmeal Bowl:</b> Erika suggested an oatmeal bowl. The user selects ingredients to go into their oatmeal and the correct sequence of ingredients would unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="3">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined8.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Acai Bowl:</b> Erika suggested building an acai bowl as a password. The user would layer different toppings on the acai smoothie and
+                                            the right combination and sequence of ingredients would unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined5.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Acai Bowl Ingredient Selection:</b> the user selects ingredients to go on the bowl by selecting each area individually and using a drop down menu.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="5">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined6.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Blended Smoothie:</b> ingredients are selected and dragged into the blender. The user then presses the power button to blend the items
+                                            together. The phone unlocks if the right combination of ingredients have been added.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined7.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Coloured Cake Batter:</b> Erika suggested using food colouring combinations as a password.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="7">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined4.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Poke Bowl:</b> Erika suggested a poke bowl. The user would drag and drop ingredients into the bowl to unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="8">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined9.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Yogurt Parfait:</b> Erika suggested using yogurt as a base.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="9">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/gesture_refined10.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Acai Ingredient Configuration:</b> Erika explored having ingredients wrap around the bowl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#myCarousel1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
 
-	<div class="row sketches">
-		<div class="col-sm-4">
-			<div class="card">
-				<img src="images/p0/designSketch10.png" class="card-img-top" alt="Spongebob in a bubble">
-				<div class="card-body">
-					<p class="card-text">
-						<b>Kim Kardashian Button</b>: click and drag Kim's earing into the ocean. Kim begins to
-						cry.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="intro">
-		<h3>After gaining feedback from our peers, we decided to go ahead with Gwyneth as our client. We felt that
-			we could explore her randomness further and surprise users with her antics.</h3>
-	</div>
-
-
-
-        <h2>Refined Sketches</h2>
-        <div class="intro">
-            <h3>
-                We centered around the idea of a random chance game to show Gwyneth's randomness. The sketches below are our iterations
-                on different interactions with the wheel.
-            </h3>
-        </div>
-
-
-        <div class="row sketches">
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="images/p0/refinedSketchOriginal.png" class="card-img-top" alt="Wheel landed on science">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <b>Wheel lands on science</b>: I explored having Gwyneth react negatively to the wheel landing
-                            on a science option. This action would be a play on Gwyneth's desire to do things as long as
-                            they are not supported by science.
-                        </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
+            <!--/main slider carousel-->
+        </div>
+<br><br>
+        <h3>The Result: Acaikii (Acai Key)</h3>
+        <div class="row">
+            <div class="col-lg-12" style="padding:50px;">
+                After iterating on the pizza idea, we decided on using the action of building an acai bowl as an unlock mechanism.
+                Acai bowls are colourful smoothie bowls that are often topped with fruits, grains, and nuts, and are popular amongst health
+                conscious individuals. Further, they are often displayed in a visually appealing way. We figured that this would
+                add to the appeal of this unlock mechanism by giving the user an opportunity to create a password that is both secure
+                and nice to look at.
+            </div>
+            <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+                To unlock the phone, users must drag and drop each topping onto the acai bowl. The right combination and sequence of
+                toppings unlocks the phone, and the wrong combination results in the bowl clearing its contents.
+            </div>
+
         </div>
 
-
-
-
-        <div class="row sketches">
-            <div class="col-sm-6">
-                <div class="card">
-                    <img src="images/p0/refinedSketch4.png" class="card-img-top" alt="Gwyneth screams">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <b>Wheel lands on science</b>: Gwyneth screams so loud that the wheel shakes, causing
-                            it to shift.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row sketches">
-            <div class="col-sm-6">
-                <div class="card">
-                    <img src="images/p0/refinedSketch7.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <b>Coffee Enema</b>: my groupmate, Valerie, proposed the idea of having a cam for inflicted areas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-        <h3>Final Version</h3>
+        <br>
+        <h3>Acaikii Demo</h3>
         <div class="row intro">
             <div class="col-sm-12">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qMzeRF3HxXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7V2hsdcNjXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-            <div class="intro">
-                <h2>Source code and executable <a class="inline-link" href="https://github.com/sarchwalk/HCI-P0">here!</a></h2>
-            </div>
-
-
-
-
-    <div class="row intro">
-        <div class="col-sm-12">
-            <h3>My Contributions:</h3>
-        </div>
-    </div>
-    <div class="row intro">
-        <div class="col-sm-12">
+        <br><br>
+        <h1>Sensor Based Unlock</h1>
+        <div class="intro">
             <p>
-                Initial 10 sketches<br>
-                Refined sketches<br>
-                Graphics: Gwyneth's head and facial reactions, refined wheel<br>
-                Animations: wheel spin, bee facial, adjusting wheel away from science, and refined steaming<br>
-                Code in WPF for animation triggers and randomization<br>
+                <i>After the initial in-class critique, we weren't overly enthused about any of our sensor-based unlock ideas. So instead we brainstormed again, and decided
+                    on using an item important to the user as a "key" to unlock the phone. While trying to identify an item, we thought about what objects would be so unique that only
+                    one person would have one on them.</i>
             </p>
         </div>
-    </div>
+
+
+        <h4>We decided to detect the presence of a <b>horseshoe</b></h4>
+
+
+        <div class="intro" style="text-align: left">
+            While a love for horses isn't as widely shared as a love for dogs and cats, we were particularly enthused about being
+            able to provide something for this niche. We figured that it would be pretty rare for someone to carry around a horseshoe,
+            so why not use one as a key!
+            <br>
+            With this in mind, we based our refined sketches on visual clues that would hint at using a horseshoe.
+        </div>
+
+            <h3>Refined Sketches</h3>
+
+
+        <!--Carousel for sensor based interaction refined sketches-->
+        <div class="py-2">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-8 offset-lg-2" id="slider">
+                    <div id="carosel" class="carousel slide shadow">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active carousel-item" data-slide-number="0">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined1.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Loading Horseshoe:</b> hold horseshoe to phone. Horseshoe loading bar fills as sensor determines if it is the correct object.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="1">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined2.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Horseshoe Game:</b> tap horseshoe to phone, horseshoe appears in hand. User flicks phone upward as if to toss horseshoe. The horseshoe spins
+                                            around the pin, and the phone unlocks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined3.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>My Faviourite Animal Reveal:</b> heart grows as if beating. As horseshoe comes closer to the phone, the heart expands. Tapping the horseshoe to the phone
+                                            reveals the horse and the phone unlocks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="3">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined4.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Unicorn Horseshoe Game:</b> a modified version of the horseshoe game where the horseshoe is thrown at the unicorns horn. When the horseshoe
+                                            spins around the unicorns horn the animal becomes furious.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined5.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Waving Horse:</b> a horse waves at the user when the phone is idle. User presses a button or taps the phone to wake it up and a
+                                            horse hoof appears. Tapping the horseshoe to the screen results in an animation of the horse running off into the distance as the phone
+                                            unlocks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="5">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined6.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Horseshoe Placeholder:</b> a placeholder for the horseshoe blinks yellow. Once the horseshoe is tapped, the placeholder turns green. This
+                                            idea was ultimately abandoned because it was clear what object needed to be used to unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined7.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Horse Wink:</b> a horse stares at the user blankly and winks when the horseshoe is tapped to the screen before it unlocks. This idea was abondoned
+                                        because it seemed to simplistic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="7">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined11.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Hammer in Shoe:</b> a horseshoe is shown on the screen. When a physical horseshoe is tapped to the screen, an animation of the horseshoe being nailed
+                                        into the hoof is shown before the phone unlocks. We decided not to go with this idea because it gave away the object required to unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="8">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined9.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Neighing Horse:</b> an image of a horse is shown to the user. When the physical horseshoe is brought up close to the phone, the horse neighs and the phone unlocks.
+                                        We did not go with this idea because we thought that it was not very interesting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-slide-number="9">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="sketch" src="./images/p1/sensor_refined8.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>Grazing Unicorn:</b> a unicorn grazes on the screen. The user must tap the horseshoe to the rainbow to unlock the phone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carosel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carosel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/main slider carousel-->
+        </div>
+        <br><br>
+
+        <h3>The Result: Shoehorn</h3>
+        <div class="row">
+            <div class="col-lg-12" style="padding:50px;">
+                After iterating on the visual cue, we decided on using a unicorn to represent the equestrian theme. Outside of that, no
+                other hints would be given about the object. Further, we decided on using a rainbow to guide where the horseshoe would need to
+                be tapped. This both fit the theme and served as a way to show that the sensor was calibrated and enusred that we could read a semi-accurate value
+                every time.
+            </div>
+            <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+                To unlock the phone, users must first tap the unicorn to calibrate the magnetic field sensor. A rainbow appears once it is ready.
+                The user must then tap the horseshoe on the rainbow. If the correct magnetic field is read, then the unicorn dances, and the phone
+                unlocks.
+            </div>
+
+        </div>
+<br><br>
+        <h3>Shoehorn Demo</h3>
+        <div class="row intro">
+            <div class="col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2LS6PV1LBpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="intro">
+            <h2>Source code <a class="inline-link" href="https://github.com/sarchwalk/HCIP1">here!</a></h2>
+        </div>
+
+
+
+
+        <div class="row intro">
+            <div class="col-sm-12">
+                <h3>My Contributions:</h3>
+            </div>
+        </div>
+        <div class="row intro">
+            <div class="col-sm-12">
+                <p>
+                    Initial 10 sketches<br>
+                    Refined sketches<br>
+                    Graphics for Shoehorn<br>
+                    Code for Shoehorn
+                </p>
+            </div>
+        </div>
     </div>
 
+
+
+
+
+</div>
 
 </body>
 </html>
