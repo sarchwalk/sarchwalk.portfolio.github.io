@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>Conversations in Bloom</title>
+</head>
+<style>
+
+
+    #myCarousel .list-inline {
+        white-space:nowrap;
+        overflow-x:auto;
+    }
+
+    #myCarousel .carousel-indicators {
+        position: static;
+        left: initial;
+        width: initial;
+        margin-left: initial;
+    }
+
+    #myCarousel .carousel-indicators > li {
+        width: initial;
+        height: initial;
+        text-indent: initial;
+    }
+
+    #myCarousel .carousel-indicators > li.active img {
+        opacity: 0.7;
+    }
+
+    .sketch {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+    .min-vh-100 {
+        min-height: 3px !important;
+    }
+    p1 {
+        font-size: 12px;
+    }
+
+</style>
+
+<body>
+<div class="header">
+    <h1>
+        Sarah Walker
+        <img class="icon" src="https://c7.uihere.com/files/260/538/516/iphone-emoji-ios-10-ios-9-emoji.jpg" alt="watermelon">
+    </h1>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="hci.html">HCI II</a></li>
+        <li><a href="tangibles-p3.html">CPSC 599.88 - P3</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>Conversations in Bloom</h1>
+    <h3>CPSC 599.88 - Physical and Tangible HCI, Project 3</h3>
+
+    <div class="intro">
+        <p>
+            Create an interactive physical visualization - an object whose physical behaviour or dynamic state
+            represents data. The data physicalization should represent personal data.
+        </p>
+    </div>
+
+
+
+    <h2>The Idea</h2>
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="description">
+                    <p style="text-align: left">
+                        By using a <b>dataset of phone call logs</b>, we wanted to track the frequency of calls with people who are important to us.
+                        Our grandparents, parents, and friends are all groups of people who we care deeply about, but we sometimes forget to call. To remind
+                        ourselves to reach out to these people more frequently, we decided to represent the 'health' of our relationship with each group.
+                        <br><br>
+                        To physicalize this data, we settled on using a tree with dynamically changing branches to represent the health of our relationship with
+                        each of the three groups.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Carousel for sensor based interaction refined sketches-->
+    <div class="py-2">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-lg-8 offset-lg-2" id="slider">
+                <div id="myCarousel1" class="carousel slide shadow">
+                    <!-- main slider carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active carousel-item" data-slide-number="0">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img class="sketch" src="./images/tangiblesp3/treeDesign.jpg" class="img-fluid">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p><b>Tree Design:</b><br><br> Our initial idea was to have two branches that would represent the health of our relationship with our parents and grandparents.
+                                    <br><br>
+                                        Initially we wanted to avoid using too many servos, so this design excluded a representation for the relationship with our friends.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-slide-number="1">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img class="sketch" src="./images/tangiblesp3/branchDesign.jpg" class="img-fluid">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p><b>Branch Design:</b><br><br>
+                                        We played around with creating branches that could fold in on themselves. In this sketch we drew out some different designs
+                                        for the components of the arm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/main slider carousel-->
+    </div>
+
+
+    <br><br><br>
+
+
+    <h2>Initial Branch Prototypes</h2>
+
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="description">
+                    <p style="text-align: left">
+                        The largest challenge that we faced was building the branch mechanism. Our initial idea was to keep all servos underneath the tree
+                        and to use a piece of string tied to the end of the branch to pull it up. Through prototyping, we discovered that this was not easily achievable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Carousel for sensor based interaction refined sketches-->
+    <div class="py-2">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-lg-8 offset-lg-2" id="slider">
+                <div id="myCarousel2" class="carousel slide shadow">
+                    <!-- main slider carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active carousel-item" data-slide-number="0">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img class="sketch" src="./images/tangiblesp3/armDesign1.jpg" class="img-fluid">
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="sketch" src="./images/tangiblesp3/armDesign2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/main slider carousel-->
+    </div>
+
+<br>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NV4mG4l9LH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+
+    <br><br>
+    <h3>The Result: Conversations in Bloom</h3>
+
+<br>
+    <!--IMAGES HERE-->
+    <h3>The Guts</h3>
+<br>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="images/tangiblesp3/armGuts.JPG" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="images/tangiblesp3/halfCoveredGuts.JPG" style="width:100%">
+        </div>
+    </div>
+
+    <br>
+    <!--IMAGES HERE-->
+    <h3>The Glory</h3>
+    <br>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="images/tangiblesp3/fullTree1.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="images/tangiblesp3/fullTree2.jpg" style="width:100%">
+        </div>
+    </div>
+
+<br><br>
+    <h3>Schematic</h3>
+    <div class="row">
+        <div class="column">
+            <img src="images/tangiblesp3/TreeSchematic.png" style="width:100%">
+        </div>
+    </div>
+
+    <br>
+    <h3>Conversations in Bloom Demo</h3>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7V2hsdcNjXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <hr>
+    <div class="intro">
+        <h2>Source code <a class="inline-link" href="https://github.com/sarchwalk/TangiblesP3">here!</a></h2>
+    </div>
+
+
+
+
+    <div class="row intro">
+        <div class="col-sm-12">
+            <p>
+            <h3>Reference Materials:</h3><br>
+                <a class="inline-link" href="https://arduinobasics.blogspot.com/2012/05/reading-from-text-file-and-sending-to.html">Reading from a text file and sending to arduino</a><br>
+                <a class="inline-link" href="https://forum.arduino.cc/index.php?topic=288234.0">Serial input</a><br>
+                <a class="inline-link" href="https://learn.adafruit.com/assets/2415">Wiring a servo and capacitor</a><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
