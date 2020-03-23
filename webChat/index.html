@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="generalStyling.css">
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <div id="welcomeHeader">
+        <h2><p>Welcome <span id="userInfo"></span></p></h2>
+    </div>
+    <div class="subHeader">
+        To change your username, enter '/nick <i>newname</i>' in the textbox, where <i>newname</i> is your desired username.
+        </br> To change your user color, enter '/nickcolor <i>ffffff</i>' in the textbox, where <i>ffffff</i> is your desired color in hexadecimal.
+    </div>
+
+    <div class="container">
+        <div class="row feed">
+            <!--column for messaging feed-->
+            <div id="messageFeed" class="col-sm-8" style="max-height: 100%; overflow-y:auto;">
+                <ul id="messages">
+                </ul>
+            </div>
+            <div class="col-sm-4" style="text-align:center;">
+                <h3>Online Users</h3>
+                <ul id="onlineUsers"></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Row for inputting messages-->
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="">
+                <input id="m" autocomplete="off" /><button>Send</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="outer-container">
+
+    </div>
+
+
+
+</body>
+</html>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script language="javascript" src="bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var socket = io();
+        var username = "";
+
+        socket.on('username',function(data){
+            username = data;
+            $('#userInfo').text(username);
+        });
+
+
+
+        $('form').submit(function(e){
+            e.preventDefault(); // prevents page reloading
+            socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            return false;
+        });
+
+        socket.on('chat message', function(msg){
+
+            var tag = ' style="color:#' + msg.color + ';">'
+            if(msg.username === username)
+            {
+                tag = '<li class="bold" ' + tag;
+                $('#messages').append($(tag).text(msg.timestamp + " " + msg.username + ": " + msg.message));
+            }
+            else
+            {
+                tag = '<li ' + tag;
+                $('#messages').append($('<li>').text(msg.timestamp + " " + msg.username + ": " + msg.message));
+            }
+
+            updateScroll();
+        });
+
+        socket.on('update user list', function(users)
+        {
+            $('#onlineUsers').empty();
+
+            for (var item in users)
+            {
+                $('#onlineUsers').append($('<li>').text(users[item]));
+            }
+
+        });
+
+        socket.on('refreshLog', function(chatHistory)
+        {
+            $('#messages').empty();
+            for (var i = 0; i < chatHistory.length; i++)
+            {
+                var tag =  'style="color:#' + chatHistory[i].color + ';">'
+                if(chatHistory[i].username === username)
+                {
+                    var tag = '<li class="bold"' + tag;
+                    console.log(tag);
+                    $('#messages').append($(tag).text(chatHistory[i].timestamp + " " + chatHistory[i].username + ": " + chatHistory[i].message));
+                }
+                else
+                {
+                    tag = '<li ' + tag;
+                    $('#messages').append($(tag).text(chatHistory[i].timestamp + " " + chatHistory[i].username + ": " + chatHistory[i].message));
+                }
+
+                updateScroll();
+                updateScroll();
+            }
+        });
+
+        function updateScroll(){
+            var element = document.getElementById("messageFeed");
+            element.scrollTop = element.scrollHeight;
+        }
+
+    });
+</script>
+</body>
+</html>
