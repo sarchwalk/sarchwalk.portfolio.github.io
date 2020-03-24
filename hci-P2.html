@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>Project 2: Stone Warden</title>
+</head>
+<style>
+
+
+    #myCarousel .list-inline {
+        white-space:nowrap;
+        overflow-x:auto;
+    }
+
+    #myCarousel .carousel-indicators {
+        position: static;
+        left: initial;
+        width: initial;
+        margin-left: initial;
+    }
+
+    #myCarousel .carousel-indicators > li {
+        width: initial;
+        height: initial;
+        text-indent: initial;
+    }
+
+    #myCarousel .carousel-indicators > li.active img {
+        opacity: 0.7;
+    }
+
+    .sketch {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+    .min-vh-100 {
+        min-height: 3px !important;
+    }
+    p1 {
+        font-size: 12px;
+    }
+
+</style>
+
+<body>
+<div class="header">
+    <h1>
+        Sarah Walker
+        <img class="icon" src="https://c7.uihere.com/files/260/538/516/iphone-emoji-ios-10-ios-9-emoji.jpg" alt="watermelon">
+    </h1>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="hci.html">HCI II</a></li>
+        <li><a href="tangibles-p3.html">CPSC 599.88 - P3</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>Stone Warden</h1>
+    <h3>CPSC 581 - Human Computer Interaction II, Project 2</h3>
+
+    <div class="intro">
+        <p>
+            Create a physical prototype to solve an everyday problem. The prototype
+            must have at least one input and one output device, and a narrative storyboard
+            sketch must describe the interactions with the final design.
+        </p>
+    </div>
+
+
+
+    <h2>Initial Design Sketches</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm">
+
+            <img class="sketch" src="./images/p2/isketch1.jpeg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Always Spreadable Butter:</b>  a heated container that maintains the perfect temperature
+                        so that butter remains spreadable at all times.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch2.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Doggie Door 2-Factor Authentication:</b> Door unlocks and opens when a dog with the correct RFID
+                        tag approaches and howls.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch3.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Booby-trapped Room:</b> Unauthorized persons who enter get laundry dumped on them.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch4.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Weather Appropriate Shoe Teller:</b> Cabinet containing shoes for different weather categories
+                        informs users of which section contains the shoes most appropriate for the day.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch10.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Robo-Scooper:</b> All-terrain robot scoops up dog poo from the backyard.</p1>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+
+
+            <img class="sketch" src="./images/p2/isketch5.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Outfit Appropriateness Teller:</b> Closet with clothes organized by formality informs users of which
+                        section their clothes for the day should come from depending on what is scheduled in their calendar.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch6.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Mood Setter:</b> Control board in room has lighting, music, and temperature presets according
+                        to what mood the user wants to set it to.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch7.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Perfect Tea Steeper:</b> Robot arm removes teabag from teacup after the appropriate steeping time has
+                        elapsed.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch8.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Automatic Plant Watering:</b> Plant watering robot gets triggered whenever plant soil has reached a certain
+                        level of dryness.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/isketch9.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Rude Awakening:</b> If blaring alarm is ignored, then the bed stand shoots balls at the sleeping user, forcing them
+                        to flee and get out of their bed.</p1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <br><br><br>
+
+    <h1>Refined Sketches: Iterating on Punishing the Participant</h1>
+
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="description">
+                    <p style="text-align: left">
+                        After looking through our initial ideas, we agreed that we enjoyed the ones that involved a level of
+                        punishment. We thought that developing something that produces a not-so-ideal outcome would be fun to
+                        develop, and might have real applications in our lives. For our refined sketches, we iterated on the situation,
+                        the punishment, and the embodiment of the contraption, as we weren't entirely sure what was the best direction
+                        to go in.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-sm">
+
+            <img class="sketch" src="./images/p2/fsketch22.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Embodiment - Embedded in Computer Screen:</b> This idea explored housing a spraying mechanism within
+                        a computer screen. The ideal application would be situations where the user is using their computer in
+                        ways that are not ideal.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/fsketch89.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Punishment - Eye Poison or Aphrodisiacs:</b> These punishments were made for an earlier idea involving
+                        either punishing someone that approaches you by spraying them, or by spraying an aphrodisiac on yourself to encourage them
+                        to like you more. These ideas were not pursued because we went with a differed situation that did not require these sprays.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/fsketch10.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Embodiment - Police Interrogation:</b> These sketches are based around an early idea we had involving a police interrogation.
+                        Erika sketched out different embodiment ideas to hide the spray within a body cam, and played around with different liquids that
+                        could be sprayed.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/fsketch1.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Embodiment - Tomb:</b> This storyboard shows an earlier idea we had involving a tomb raider. The idea is that the spray would be
+                        used to punish the tomb raider and scare them away.</p1>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+
+
+            <img class="sketch" src="./images/p2/fsketch21.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Punishment - Elastic Bands and Screeching:</b> This idea was to have elastic bands shot at the user, all while a horrible
+                        screeching noise played. We decided not to go with the elastic bands because they did not have a clear way for implementation, but the
+                        screeching noise was something that we wanted to implement in our.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/fsketch23.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Situation - Playing Games When You Should Be Working:</b> This sketch outlines an idea where the user
+                        should be working or studying, but instead plays games on their computer. This idea was considered for the final
+                        implementation, but we weren't as excited by it as we were the other ideas.</p1>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p2/fsketch27.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Embodiment - Treasure:</b> These six sketches were different ideas for housing proposed by Erika.
+                    Most of these, excluding the golden idol and the treasure chest, were abandoned because there was no clear
+                    way to install our spray mechanism. We decided to go with the golden idol, or any sort of valuable looking statue,
+                    because we figured out a clear way to hide our spray mechanism within it that didn't make it obvious that it was booby-trapped.</p1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <br><br>
+    <h2>Stone Warden</h2>
+
+    <div class="row">
+        <div class="col-lg-12" style="padding:50px;">
+            After iterating through different situations, punishments, and embodiments, we decided to make a booby-trapped statue.
+            We call this the <b>Stone Warden</b>.
+        </div>
+
+        <img class="sketch" style="width:70%; margin:auto" src="./images/p2/finalStoryboard.jpg" class="img-fluid">
+
+        <div class="col-lg-12" style="padding:50px;">
+            The <b>Stone Warden</b> is a statue that punishes thieves who try to steal it by spraying them with poison. The thief will then be so scared
+            that they will run away and leave behind precious items.
+        </div>
+
+        <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+            <h3>Our Ideal Client</h3><br>
+            We see individuals who want to protect their prized possessions wanting to use the <b>Stone Warden</b>. Ideally, they would place the
+            statue on display amongst their other valuable items. The <b>Stone Warden</b> should be placed on the pedestal most easily accessed, so that
+            thieves try to take it first.
+            <br><br>
+        </div>
+
+        <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+            <h3>Embodiment</h3><br>
+            The <b>Stone Warden</b> is a stone statue with bright red flashing eyes with a hidden sensor and a mouth that sprays liquids. We designed
+            the statue so that the input and output was hidden from the outside, ensuring that thieves aren't aware that the statue is booby-trapped.
+            <br><br>
+            One of the pieces of feedback we got from our classmates was to use proximity to trigger the spray. This
+            proved useful as the ultrasonic sensor, which detects proximity, was easy to disguise as eyes in the statue. Red
+            LED's were also used in the eyes to flash in anger while the spray went off.
+            <br><br>
+            <img style="width:50%; display: block; margin-left: auto; margin-right: auto;" src="./images/p2/statueOnStand.jpg" class="img-fluid">
+            <br><br>
+        </div>
+
+        <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+            <h3>The Hardware</h3><br>
+            The two LED's and the ultrasonic sensor are controlled and powered directly from the Arduino. The motor, which is a
+            car windshield washer fluid spray motor, is powered by an external 12V power source and controlled by the Arduino through
+            the use of a relay.
+            <br><br>
+        </div>
+
+        <div class="row" style="width:70%; margin:auto;">
+            <div class="col-sm">
+                <img class="sketch" src="./images/p2/relay.jpg" class="img-fluid">
+                <br>
+                <img class="sketch" src="./images/p2/motorSystem.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm">
+                <img class="sketch" src="./images/p2/ultrasonicSensor.jpg" class="img-fluid">
+                <br>
+                <img class="sketch" src="./images/p2/system.jpg" class="img-fluid">
+            </div>
+        </div>
+        <br><br>
+
+    </div>
+
+    <br>
+    <h3>Stone Warden Demo</h3>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7V2hsdcNjXY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <hr>
+    <div class="intro">
+        <h2>Source code<a class="inline-link" href="https://github.com/sarchwalk/HCI-P2">here!</a></h2>
+    </div>
+
+    <h2>Future Directions</h2>
+    <br>
+    One main component that we would like to add is sound. As someone approaches from afar, spooky music should begin playing to scare the thief. Only if the
+    thief becomes
+
+
+    <div class="row intro">
+        <div class="col-sm-12">
+            <h3>My Contributions:</h3>
+        </div>
+    </div>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <p>
+                Initial 10 sketches<br>
+                Refined sketches<br>
+                Hardware development (sensor trigger, LED flash, and motor action)<br>
+                Arduino code
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
