@@ -242,7 +242,7 @@
                 <div class="col-sm description">
                     <p1><b>Punishment - Elastic Bands and Screeching:</b> This idea was to have elastic bands shot at the user, all while a horrible
                         screeching noise played. We decided not to go with the elastic bands because they did not have a clear way for implementation, but the
-                        screeching noise was something that we wanted to implement in our.</p1>
+                        screeching noise was something that we wanted to implement.</p1>
                 </div>
             </div>
 
@@ -275,14 +275,14 @@
     <div class="row">
         <div class="col-lg-12" style="padding:50px;">
             After iterating through different situations, punishments, and embodiments, we decided to make a booby-trapped statue.
-            We call this the <b>Stone Warden</b>.
+            We call this the <b>Stone Warden</b>.<br>
+            <br><h3>Narrative Storyboard</h3>
         </div>
-
         <img class="sketch" style="width:70%; margin:auto" src="./images/p2/finalStoryboard.jpg" class="img-fluid">
 
         <div class="col-lg-12" style="padding:50px;">
-            The <b>Stone Warden</b> is a statue that punishes thieves who try to steal it by spraying them with poison. The thief will then be so scared
-            that they will run away and leave behind precious items.
+            <h4>The <b>Stone Warden</b> is a statue that punishes thieves who try to steal it by spraying them with poison. The thief will then be so scared
+                that they will leave in a hurry, ensuring that valuable items are left where they belong.</h4>
         </div>
 
         <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
@@ -302,11 +302,24 @@
             proved useful as the ultrasonic sensor, which detects proximity, was easy to disguise as eyes in the statue. Red
             LED's were also used in the eyes to flash in anger while the spray went off.
             <br><br>
+            To hide the water bladder, power supply, and the Arduino, the statue was put on a pedestal which contained the aforementioned items. This also
+            ensured that the electronics did not get wet from the spray if it were triggered.
+            <br><br>
             <img style="width:50%; display: block; margin-left: auto; margin-right: auto;" src="./images/p2/statueOnStand.jpg" class="img-fluid">
             <br><br>
+
+            <div class="row" style="width:70%; margin:auto;">
+                <div class="col-sm">
+                    <img class="sketch" src="./images/p2/fullStatueFront.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm">
+                    <img class="sketch" src="./images/p2/fullStatueBack.jpg" class="img-fluid">
+                </div>
+            </div>
         </div>
 
         <div class="col-lg-12" style="padding-left:50px;padding-right:50px">
+            <br><br>
             <h3>The Hardware</h3><br>
             The two LED's and the ultrasonic sensor are controlled and powered directly from the Arduino. The motor, which is a
             car windshield washer fluid spray motor, is powered by an external 12V power source and controlled by the Arduino through
@@ -317,13 +330,31 @@
         <div class="row" style="width:70%; margin:auto;">
             <div class="col-sm">
                 <img class="sketch" src="./images/p2/relay.jpg" class="img-fluid">
-                <br>
+                <div class="row">
+                    <div class="col-sm description">
+                        <b>Relay</b>
+                    </div>
+                </div>
                 <img class="sketch" src="./images/p2/motorSystem.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <b>Spray Motor and Water Bladder</b>
+                    </div>
+                </div>
             </div>
             <div class="col-sm">
                 <img class="sketch" src="./images/p2/ultrasonicSensor.jpg" class="img-fluid">
-                <br>
+                <div class="row">
+                    <div class="col-sm description">
+                        <b>Ultrasonic Sensor and LEDs</b>
+                    </div>
+                </div>
                 <img class="sketch" src="./images/p2/system.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <b>Entire System</b>
+                    </div>
+                </div>
             </div>
         </div>
         <br><br>
@@ -345,8 +376,8 @@
 
     <h2>Future Directions</h2>
     <br>
-    One main component that we would like to add is sound. As someone approaches from afar, spooky music should begin playing to scare the thief. Only if the
-    thief becomes
+    As someone approaches from afar, we would like to add spooky noises to scare the thief away. Additionally, we would like
+    to add more LED's to the eyes to surround the ultrasonic sensor.
 
 
     <div class="row intro">
@@ -359,8 +390,8 @@
             <p>
                 Initial 10 sketches<br>
                 Refined sketches<br>
-                Hardware development (sensor trigger, LED flash, and motor action)<br>
-                Arduino code
+                Hardware design and assembly (sensor trigger, LED flash, and motor action)<br>
+                Arduino code development for running the hardware
             </p>
         </div>
     </div>
