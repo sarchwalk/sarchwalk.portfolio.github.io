@@ -10,6 +10,7 @@
     line-height: 100px;
     text-align: center;
     background: white;
+
 }
 
 .header h1 {
@@ -53,10 +54,13 @@
 body {
     margin: 0;
     background: #f5f5f5;
+    font-family: 'Abel', sans-serif;
 }
 
-p, h1, h2, h3, h4, h5, h6, li {
-    font-family: 'Roboto Condensed', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
 }
 
 h1 {
@@ -223,3 +227,16 @@ a:hover {
     margin: 5px;
 }
 
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

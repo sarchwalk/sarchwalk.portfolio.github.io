@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>RAINBRELLA</title>
+</head>
+<style>
+
+    .sketch {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+    .min-vh-100 {
+        min-height: 3px !important;
+    }
+    p1 {
+        font-size: 12px;
+    }
+
+</style>
+
+<body>
+<div class="header">
+    <h1>
+        Sarah Walker
+        <img class="icon" src="https://c7.uihere.com/files/260/538/516/iphone-emoji-ios-10-ios-9-emoji.jpg" alt="watermelon">
+    </h1>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="hci.html">HCI II</a></li>
+        <li><a href="tangibles-p3.html">CPSC 599.88 - P3</a></li>
+        <li><a href="tangibles-p4.html">CPSC 599.88 - P4</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>RAINBRELLA</h1><br>
+    <h3>CPSC 599.88 - Physical and Tangible HCI, Project 4</h3>
+
+    <div class="intro">
+        <p>
+            Create a wearable "fashionable" interface that communicates or reifies the concept of hygge..
+        </p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row" style="width:60%; margin:auto;">
+        <div class="column">
+            <img src="images/tangiblesp4/closedUmbrella.jpg" style="width:80%">
+        </div>
+        <div class="column">
+            <img src="images/tangiblesp4/openUmbrella.jpg" style="width:80%">
+        </div>
+    </div>
+    <br><br><br>
+
+
+    <h2>Summary</h2>
+            <div class="intro">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="description">
+                            <p style="text-align: left">
+                                Inspired by sunshowers, the <b>RAINBRELLA</b> seeks to connect users to nature and the feeling of well-being.
+                                The <b>RAINBRELLA</b> is a fashion accessory that sprays water when it's hot and sunny out, creating a
+                                sunshower for users to enjoy while staying comfortably dry.
+                                <br><br>
+                                The <b>RAINBRELLA</b> has the advantage of working as a regular umbrella when necessary, so that users
+                                only need to carry around one item! Aside from a bag that hangs from the handle containing the water bladder
+                                and a power supply, no other accessories
+                                are required for the <b>RAINBRELLA</b> to work.
+                                <br><br>
+                                To use the <b>RAINBRELLA</b>, users simply need to open the umbrella. The attached Arduino will use sensors to
+                                detect the current weather conditions and start the rain sequence if appropriate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <h2>Context</h2>
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="description">
+                    <p style="text-align: left">
+                        To me, the feeling of hygge is strongest when I’m out in nature. This project is aimed at capturing that feeling whether you’re at
+                        home, or out exploring nature. The <b>RAINBRELLA</b> is designed to be used in a warm and sunny environment and creates the relaxing sound of rain,
+                        all while ensuring that you are comfortable and dry. 
+                        By nature of the <b>RAINBRELLA's</b> size, it is intended to be used by one individual, unless another participant desires to get wet.
+                    </p>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+
+
+    <h2>Physical Input</h2>
+    <br><br>
+
+    <img class="sketch" src="./images/tangiblesp4/inputSensors.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+
+
+    <br><br>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <p><b>Reed Switch</b><br><br>
+                        The reed switch is used to detect when the umbrella is open. The switch is fixed immediately under the hood
+                        of the umbrella and a magnet is attached to one of the umbrella's arms. When the umbrella opens, the arm moves
+                        close to the reed switch, so that the magnet activates the switch.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <p><b>Photoresistor</b><br><br>
+                        The photoresistor is used to detect whether it is sunny or cloudy out. The sensor is fixed to the outside top
+                        of the umbrella. When the umbrella is open, a value is read from the photoresistor to determine whether the
+                        conditions are good (sunny) or bad (cloudy).
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <p><b>Temperature and Humidity Sensor</b><br><br>
+                        The temperature and humidity sensor is used to determine if it is hot outside and not already raining. The sensor is
+                        fixed immediately under the hood of the umbrella, so it should not get wet when the spray is triggered.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+    <h2>Physical Output</h2>
+    <br>
+
+    <br><br>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/outputPump.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <br><br><p><b>Water Pump</b><br><br>
+                        The water pump is contained within a bag hanging on the umbrella's handle. The pump is connected to a tube
+                        that runs up the handle of the umbrella and through to the top, where a nozzle is fixed.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/outputLED.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <br><br><p><b>LED Strips</b><br><br>
+                        The LED strips are run along four arms of the umbrella. They turn on when the umbrella is open and spraying.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; margin:auto;">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/powerSupply.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <br><br><p><b>Power Supply</b><br><br>
+                    The pump runs off of a variable power supply set to 12v.
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h2>Prototyping Process</h2>
+    <br>
+
+    <h3>The Circuit</h3>
+    <!--CIRCUIT-->
+    <br><br>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/circuit.JPG" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+                <div class="col-sm">
+                    <p>
+                        The sensors and relay were tested without the pump to ensure that they behaved as expected before being soldered to
+                        longer wires. All of the arduino code was written in this stage. The advantage of doing it this way was that I didn't
+                        have to deal with water going everywhere (yet).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>The Water Bladder</h3><br><br>
+    <!--WATER BLADDER-->
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/oldBladder.jpg" class="img-fluid" style="width: 50%; margin:auto;">
+                </div>
+                <div class="col-sm">
+                    <p>
+                        I tried using a small water bladder originally used in a CPSC 581 project. However, the bladder proved to
+                        be too small, so instead I scoured my house for something larger and found a wine bag. I sawed the nozzle off and the remaining
+                        attachment fit to a make-shift adapter (the white tube) which fit to the pump's grommet.
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="width:93%;margin:auto;">
+                <div class="col-sm" style="text-align: center;">
+                    <br>
+                    <img class="sketch" src="./images/tangiblesp4/pumpSystem.jpg" class="img-fluid" style="width:70%; margin:auto;">
+                </div>
+                <div class="col-sm" style="text-align: center;">
+                    <br>
+                    <img class="sketch" src="./images/tangiblesp4/waterBladder.jpg" class="img-fluid" style="width: 70%; margin:auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>The Nozzle</h3><br>
+    <!--NOZZLE-->
+    <div class="row" style="width: 80%; margin:auto;">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/nozzle.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+                <div class="col-sm">
+                    <p>
+                        There are no action shots of this stage (due to frequent spills, slips, and overall chaos), but I tested four nozzles from an irrigation set before settling on this one.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>Wiring in the <b>RAINBRELLA</b></h3><br>
+    <div class="row" style="width: 100%; margin:auto;">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="sketch" src="./images/tangiblesp4/undersideUmbrella.jpg" class="img-fluid" style="width: 60%; margin:auto;">
+                </div>
+                <div class="col-sm">
+                    <p>
+                        Installing the sensors, LEDs, and tubing on the umbrella was a challenge. Hot glue did not stick to the metal bar very well, so I used duct tape to attach everything. If I had
+                        the ability to build an umbrella from scratch I would have the wires and the tube run inside of the center bar, which would look cleaner than what I made.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br><br><br>
+    <h2>Rainbrella Demo</h2><br><br>
+    <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8g_o7IBhcOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <br><br><br><br>
+    <h2>Schematic</h2><br><br>
+    <div class="row" style="width:60%; margin:auto;">
+        <div class="column">
+            <img src="images/tangiblesp4/schematic.png" style="width:100%">
+        </div>
+    </div>
+    <hr>
+    <div class="intro">
+        <h2>Source code <a class="inline-link" href="https://github.com/sarchwalk/TangiblesP4">here!</a></h2>
+    </div>
+
+
+
+
+    <div class="row intro">
+        <div class="col-sm-12">
+            <p>
+                <h3>Reference Materials:</h3><br>
+                <a class="inline-link" href="https://www.instructables.com/id/How-to-use-a-photoresistor-or-photocell-Arduino-Tu/">Photoresistor circuit</a><br>
+                <a class="inline-link" href="https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino">How to read values from DHT 11</a><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
