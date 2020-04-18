@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <title>OWLECTO</title>
+</head>
+<style>
+
+    .sketch {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+    .min-vh-100 {
+        min-height: 3px !important;
+    }
+    p1 {
+        font-size: 17px;
+    }
+
+</style>
+
+<body>
+<div class="header">
+    <h1>
+        Sarah Walker
+        <img class="icon" src="https://c7.uihere.com/files/260/538/516/iphone-emoji-ios-10-ios-9-emoji.jpg" alt="watermelon">
+    </h1>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="hci.html">HCI II</a></li>
+        <li><a href="tangibles-p3.html">CPSC 599.88 - P3</a></li>
+        <li><a href="tangibles-p4.html">CPSC 599.88 - P4</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>OWLECTO</h1><br>
+    <h3>CPSC 581 - Human Computer Interaction, Project 3</h3>
+
+    <div class="intro">
+        <p>
+            Design a system that connects two distance separated intimates.
+        </p>
+    </div>
+
+<div class="section">
+    <div class="subtitle">Initial Design Sketches</div>
+
+    <div class="row">
+        <div class="col-sm">
+
+            <img class="sketch" src="./images/p3/initialSketches1.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Send Coffee to a Friend:</b>  a coffee machine that is connected to an app. Drinks made are determined by someone
+                    far away who has the app.</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Bear Hug Pendant:</b> when the bear gets hugged, the pendant worn by someone else warms.</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Family Garden:</b> a group of people share the same garden on the app. Each individual is tasked with a number
+                        of daily activities.</p1><br><br>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p3/initialSketches2.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Hanging Postcard:</b> send a message through the app and it will appear on a photo frame elsewhere in the world..</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>The Boss is Coming!:</b> when the boss connects to your webcam an alarm is triggered and a screen comes down to hide what's behind you.</p1><br><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <img class="sketch" src="./images/p3/initialSketches3.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Live Concert:</b> tiny animal records audio and plays it back in another home.</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Zoom Alarm:</b> electronic sign blinks and makes sound to inform user that they have a zoom meeting scheduled now.</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Party From Afar:</b> party attendees use the app to control environmental aspects on the space. Each attendee
+                    controls one aspect and cannot change others.</p1><br><br>
+                </div>
+            </div>
+
+            <img class="sketch" src="./images/p3/initialSketches4.jpg" class="img-fluid">
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Thinking of You Hat:</b> whenever user touches their hat, a paired hat lights up.</p1><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Remote Race:</b> users control a small RC car using an app. They can race against others while staying inside.</p1><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="section">
+        <div class="subtitle">Refined Sketches</div>
+
+        <div class="subsection" style="text-align: center;">
+        <p>For our refined sketches we iterated on the idea of haunting someone, and the tamagotchi idea.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+
+                <img class="sketch" src="./images/p3/refined1.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Sound Filter:</b> app controls audio filter. We decided not to go with this idea because the implementation seemed
+                        too difficult.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined3.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Tamagotchi Snack:</b> app dispenses a snack. We decided not to go with this idea because our classmates seemed to like the haunting ideas more.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined5.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Door Knocker:</b> app controls a door knock so that you can play ding-dong-ditch from afar. This idea was considered for
+                        final implementation, however we ultimately wanted to go with something that was spookier.</p1><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Toy Control:</b> app controls toy actions from afar. Aspects of this idea were included in the final design.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined7.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Skeleton Desk Buddy:</b> app controls a skeleton head to make it spin, make the teeth chatter, and make it talk. This idea is the base
+                        for the final design.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined9.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Candy Hand:</b> app controls the opening and closing of a hand so that the user can control when
+                            another person gets a treat. This idea was abandoned because we wanted to do something spookier.</p1><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img class="sketch" src="./images/p3/refined2.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Moods:</b> shared mood board with others. We did not go with this idea because we decided to make something spookier.</p1><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Reverse Tamagotchi:</b> app controls actions on another persons tamagotchi. We abandonded this idea because we wanted to do something spooky.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined4.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Tiny Things Controls:</b> app controls tiny things in another persons room to freak them out. An element of this idea was used in the final design.</p1><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Summer Camp Mailbox:</b> app controls controls a mailbox that dispenses a treat. We did not go with this idea because we wanted to make something spooky.</p1><br><br>
+                    </div>
+                </div>
+
+                <img class="sketch" src="./images/p3/refined6.jpg" class="img-fluid">
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Two Way Haunting:</b> app is connected to items in both user's houses so that they can haunt each other. This idea was considered for the final design. However, time was limited so
+                        we did not pursue this.</p1><br><br>
+                    </div>
+                </div>
+
+
+                <img class="sketch" src="./images/p3/refined8.jpg" class="img-fluid">
+                <div class="row">
+                <div class="col-sm description">
+                    <p1><b>Treat-O-Clock:</b> app schedules a treat to be dispensed at a certain time. We decided not to go with this idea because
+                    we wanted to do something spooky.</p1><br><br>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Hogwarts Portrait:</b> app controlled portrait flashes eyes and speaks to passing people. This idea was considered but abandoned because we thought
+                        that something on a wall would be too easy to ignore.</p1><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm description">
+                        <p1><b>Spooky Owl:</b> app controls an owl whose head follows any passerby. App can be used
+                            to send messages. An element of this idea was included in the final design.</p1><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="subtitle">
+            Final Design
+        </div>
+        <div class="subsestion">
+            <img class="sketch" src="./images/p3/finalDesign.jpg" class="img-fluid" style="width: 40%; margin:auto;">
+        </div>
+        <br>
+        <div class="subsection">
+            After receiving feedback from our peers, we decided to go ahead with the idea of a haunting between friends.
+            After discussing different ways of achieving this, we decided on using sounds, lights, and movement
+            to spook the scaree. The owl embodiment was chosen for its creepyness and for its natural mapping of sounds and
+            movement.
+            <br><br>
+            From further discussion, we decided on going hands-free for the controls. While an app would be interesting to build,
+            we wanted to create something that was so easy to use, that the user wouldn't even have to lift a finger.
+            To achieve this, we built OWLECTO's controls as an action for the Google Home
+
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="subtitle">
+            Personas
+        </div>
+
+        <div class="subsection">
+            <div class="subsection">
+                <img class="sketch" src="./images/p3/chicago.png" class="img-fluid" style="width: 40%; margin:auto;">
+                <div class="subsubtitle">
+                    Chicago Kardashian East
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+
+                        <p>
+                            Chicago Kardashian East is a student at the University of Calgary. She was very sad when COVID-19 forced her
+                            to stay home because she loves planning social activities and hanging out with her friends (but she understands
+                            her responsibility to help flatten the curve). Chicago is a big fan of horror movies and goes to ScreamFest with
+                            her friends every year. She is often inspired by these experiences to play spooky pranks on her friends. She is
+                            very computer literate and likes to share her newest tech finds with anyone that will listen. She finds it difficult
+                            to focus on school work for long periods of time and constantly messages friends as a reprieve. Chicago has no problem
+                            initiating communications and likes to check in on people in fun and inventive ways, even if they don’t always reciprocate.
+                            However, sometimes when her friends don’t see her messages, she wishes there was a more obnoxious and immediate way she
+                            could get their attention. Chicago just wants her friends to know she’s thinking of them, and she won’t be thwarted
+                            by people who don’t regularly check their phones.
+                        </p>
+                    </div>
+                    <div class="col-sm">
+                        <div class="subsubsubtitle">
+                            Characteristics:
+                        </div>
+                        <ul class="a">
+                            <li>Age 21</li>
+                            <li>In university, stuck at home because of COVID-19</li>
+                            <li>Sad that she cannot socialize with friends</li>
+                            <li>Starts conversations with people to procrastinate doing work</li>
+                            <li>Takes great pleasure in bothering and (lovingly) harassing her friends</li>
+                            <li>Enjoys horror movies and executing a good scare</li>
+                        </ul>
+                        <div class="subsubsubtitle">
+                            Goals:
+                        </div>
+                        <ul class="a">
+                            <li>Perform small and annoying gestures for her friends, without the need for reciprocation</li>
+                            <li>Not to distract her friends too much from their activities and studies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <img class="sketch" src="./images/p3/blue.png" class="img-fluid" style="width: 40%; margin:auto;">
+                <div class="subsubtitle">
+                    Blue Navy Carter
+                </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <p>
+                            Blue Navy Carter is a student at the University of Calgary. When the government ordered people to social
+                            distance due to COVID-19, she could no longer hang out with her friends in person. Blue and her friends
+                            share a love of horror movies and haunted houses and they constantly try to spook each other with small
+                            pranks. Though she may not admit it, Blue prefers to be the victim, because it’s a lot of work to plan
+                            and execute a good scare. She is fairly tech-savvy and is open to trying out new gadgets. Unfortunately,
+                            she is notorious for having her phone on silent and not reading messages at the time she receives them. Thus,
+                            Blue often misses her friends’ attempts to check in and start conversations when they are socially isolated.
+                            However, their small gestures bring a big smile to her face when she eventually sees them. Blue also spends
+                            most of her time at her desk, busy doing school work as the semester wraps up. As such, she rarely finds time
+                            to initiate online hangouts of her own, prefering to put the onus of communication on her more thoughtful friends.
+                        </p>
+                    </div>
+                    <div class="col-sm">
+                        <div class="subsubsubtitle">
+                            Characteristics:
+                        </div>
+                        <ul class="a">
+                            <li>Age 21</li>
+                            <li>In university, studying at home because of COVID-19</li>
+                            <li>Cannot socialize with friends in person</li>
+                            <li>Consistently working at her desk</li>
+                            <li>Doesn’t respond to messages in a timely fashion</li>
+                            <li>Always has phone on silent</li>
+                            <li>Enjoys horror movies and the adrenaline rush of getting scared</li>
+                            <li>Appreciates small gestures from her friends</li>
+                        </ul>
+                        <div class="subsubsubtitle">
+                            Goals:
+                        </div>
+                        <ul class="a">
+                            <li>Maintain friendships with minimal effort</li>
+                            <li>Focus on school work without getting sidetracked by actively participating in online conversations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="subtitle">Design process</div>
+
+
+    <div class="section">
+        <div class="subsubtitle">
+            Embodiment
+        </div>
+
+        <div class="subsestion">
+            <img class="sketch" src="./images/p3/embodiment.JPG" class="img-fluid" style="width: 40%; margin:auto;">
+        </div>
+        <br>
+
+        <div class="subsection">
+            <p>OWLECTO was made to sit near a user on a desk or table.
+                The owl itself is made of paper mache so
+                that it is lightweight, but strong
+                enough to survive constant movement.</p>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="subsubtitle">
+            Hardware
+        </div>
+
+        <div class="subsestion">
+            <img class="sketch" src="./images/p3/insideHead.JPG" class="img-fluid" style="width: 40%; margin:auto;">
+        </div>
+        <br>
+
+        <div class="subsection">
+            <p>OWLECTO is controlled by an ESP8266 and powered by a 5V external power supply.
+                Two servos attached to one another (to get approximately 360 degrees)
+                control the head movements, and another servo is used to control the beak.
+                Two LEDs are used in the eyes and an 8 Ohm speaker attached to an amp is fixed inside of the head.</p>
+        </div>
+        <div class="subsection">
+            <div class="row" style="width:70%; margin:auto;">
+                <div class="col-sm">
+                    <img class="sketch" src="./images/p3/esp.JPG" class="img-fluid">
+                    <div class="row">
+                        <div class="col-sm description">
+                            ESP8266<br><br>
+                        </div>
+                    </div>
+                    <img class="sketch" src="./images/p3/servo.JPG" class="img-fluid">
+                    <div class="row">
+                        <div class="col-sm description">
+                            Servo (x3)<br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img class="sketch" src="./images/p3/leds.JPG" class="img-fluid">
+                    <div class="row">
+                        <div class="col-sm description">
+                            LEDs<br><br>
+                        </div>
+                    </div>
+                    <img class="sketch" src="./images/p3/speaker.JPG" class="img-fluid">
+                    <div class="row">
+                        <div class="col-sm description">
+                            Speaker and Amp<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="subsubtitle">
+            Software - Google Assistant
+        </div>
+        <div class="subsestion">
+            <img class="sketch" src="./images/p3/feed.PNG" class="img-fluid" style="width: 60%; margin:auto;">
+        </div>
+        <br>
+        <div class="subsection">
+            <p>The ESP8266 reads data from Adafruit IO, so to get it working with Google Assistant we had to create an action. Using Zapier, Erika created a script that
+                takes the command said to Google Assistant and puts it in Google Sheets. Then, three other scripts are used to recognize when someone says "Scare",
+                "Spook", and "Traumatize for Life", and then send a number corresponding to which command was given to Adafruit IO.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="subsubtitle">
+            Challenges and Future Improvements
+        </div><p>
+        The largest challenge we faced when creating OWLECTO was determining what kind of embodiment
+        would be most interesting for the user. If we weren't participating in physical distancing, we
+        would have liked to get feedback from potential users to improve on our design.
+        <br><br>
+        To improve OWLECTO, we would find and play better sound clips so that OWLECTO's hoot sound like and
+        owl's hoot.
+    </p>
+        <br>
+    </div>
+
+    <h2>OWLECTO DEMO</h2><br><br>
+    <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PayNabc1S8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <br><br><br>
+    <hr>
+    <div class="intro">
+        <h2>Source code <a class="inline-link" href="https://github.com/sarchwalk/HCI-P3">here!</a></h2>
+    </div>
+
+
+
+
+    <div class="row intro">
+        <div class="col-sm-12">
+            <h3>My Contributions:</h3>
+        </div>
+    </div>
+    <div class="row intro">
+        <div class="col-sm-12">
+            <p>
+                Initial 10 sketches<br>
+                Refined sketches<br>
+                Owl design and assembly<br>
+                Hardware design and assembly<br>
+                Arduino code development for running the hardware and receiving input from Adafruit IO<br>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
