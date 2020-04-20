@@ -13,7 +13,8 @@ body{
     height: 100px;
     line-height: 100px;
     text-align: center;
-    background: white;
+    background-color: white;
+    font-family: 'Abel', sans-serif;
 
 }
 
@@ -32,22 +33,35 @@ body{
 
 .nav {
     overflow: hidden;
-    background-color: #afabb5;
     padding: 14px 16px;
     text-align: center;
     font-size: 20px;
+    color:grey;
+    background-color: white;
 }
 
 .nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     position: sticky;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
 
 }
 
 .nav li {
     display: inline;
+}
+
+.nav li a{
+    color: grey;
+    margin: 30px;
+}
+
+.nav li a:hover
+{
+    color: mediumpurple;
 }
 
 
@@ -83,7 +97,7 @@ h3 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 a {
@@ -99,6 +113,7 @@ a {
 
 a:hover {
     color: #f8baf9;
+    text-decoration: none;
 }
 
 .container {
